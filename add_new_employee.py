@@ -39,12 +39,6 @@ login_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XP
 time.sleep(1)
 login_button.click()
 
-# verify_login= "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
-# print(verify_login)
-
-# driver.get('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList')
-# driver.get('https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee')
-
 # Locating the Menu on the side pane of the admin page
 main_menu= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a')))
 main_menu.click()
@@ -67,21 +61,3 @@ addbtn = WebDriverWait(driver, 10).until(
 
 addbtn.click()
 time.sleep(5)
-# # wait for the checkbox to be loaded
-# checkbox = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '//div[@class="oxd-switch-wrapper"]/label/input[@type="checkbox"]')))
-#
-# # click the checkbox using JavaScript
-# driver.execute_script("arguments[0].click();", checkbox)
-#
-# username = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '//label[text()="Username"]/following-sibling::div/input')))
-# username.send_keys('your_username')
-#
-# Password = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '//input[@type="password"]'))).send_keys('madara123')
-#
-# # wait for the confirm password field to be loaded and enter a password
-# confirm_password_field = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '(//input[@class="oxd-input oxd-input--active"])[2]')))
-# confirm_password_field.send_keys(Password)
