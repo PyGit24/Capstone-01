@@ -75,16 +75,7 @@ nation.select_by_visible_text("Indian")
 nation.select_by_index(5)
 time.sleep(5)
 
-# gender = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div[2]/div[2]/div/div[1]/label")))
 gender= WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,'//div[@class="oxd-radio-wrapper"]/label/input[@type="radio"]')))
-# gender.click()
-# Use ActionChains to input text and select the first suggestion
-# actions.send_keys_to_element(listbox,"Indian")
-# actions.pause(2)
-# actions.send_keys(Keys.DOWN)
-# actions.pause(1)
-# actions.send_keys(Keys.ENTER)
-# actions.perform()
 
 driver.execute_script("arguments[0].click();", checkbox)
 
@@ -93,15 +84,4 @@ savebtn = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//button[@class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space"]')))
 savebtn.click()
 
-# username = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '//label[text()="Username"]/following-sibling::div/input')))
-# username.send_keys('your_username')
-#
-# Password = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '//input[@type="password"]'))).send_keys('madara123')
-#
-# # wait for the confirm password field to be loaded and enter a password
-# confirm_password_field = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.XPATH, '(//input[@class="oxd-input oxd-input--active"])[2]')))
-# confirm_password_field.send_keys(Password)
 time.sleep(5)
